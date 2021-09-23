@@ -1,0 +1,58 @@
+
+    <br>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+        <b>
+            <ul class="navbar-nav">
+
+                <li>
+                    <a routerLink="/students" routerLinkActive="active" class="nav-link">Student List</a>
+                </li>
+                <li>
+                    <a routerLink="/create-student" routerLinkActive="active" class="nav-link">Add Student</a>
+                </li>
+
+                <li>
+
+                    <ng-template #isLogOut>
+                        <a class="nav-link" routerLink="/login">Login</a>
+                    </ng-template>
+                </li>
+            </ul>
+        </b>
+    </nav>
+
+
+    <br>
+    <div class="bb">
+        <h2 style="text-align: center;">Student List</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
+                    <th>EMAIL ID</th>
+                    <th>BRANCH</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td>{{student.id}}</td>
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.lastName}}</td>
+                    <td>{{student.emailId}}</td>
+                    <td>{{student.branch}}</td>
+                    <td>
+                        <button (click)="updateStudent(student.id)" class="btn btn-info"> Update</button>
+                        <button (click)="deleteStudent(student.id)" class="btn btn-danger"
+                            style="margin-left: 10px">Delete</button>
+                        <button (click)="studentDetails(student.id)" class="btn btn-info" style="margin-left: 10px">
+                            View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>

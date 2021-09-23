@@ -1,0 +1,57 @@
+<br>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+    <b>
+        <ul class="navbar-nav">
+
+            <li>
+                <a routerLink="/students" routerLinkActive="active" class="nav-link">Student List</a>
+            </li>
+            <li>
+                <a routerLink="/create-student" routerLinkActive="active" class="nav-link">Add Student</a>
+            </li>
+
+        </ul>
+    </b>
+</nav>
+
+<div class="col-md-6 offset-md-3">
+    <h3 class="txt"> <em><b>Create Student</b> </em></h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "firstName"
+                [(ngModel)] = "student.firstName" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "student.lastName" name = "lastName">
+        </div>
+    
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "student.emailId" name = "emailId">
+        </div>
+
+        <div class="form-group">
+            <label> Branch</label>
+            <select type="Dropdowwn" class ="form-control" id = "branch"
+                [(ngModel)] = "student.branch" name = "branch">
+                <option>--Select--</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>IT</option>
+                <option>EEE</option>
+                <option>CIVIL</option>
+                <option>MECH</option>
+                </select>
+        </div><br>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

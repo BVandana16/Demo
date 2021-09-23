@@ -1,0 +1,51 @@
+<br>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+    <b>
+        <ul class="navbar-nav">
+
+            <li>
+                <a routerLink="/students" routerLinkActive="active" class="nav-link">Student List</a>
+            </li>
+            <li>
+                <a routerLink="/create-student" routerLinkActive="active" class="nav-link">Add Student</a>
+            </li>
+
+        </ul>
+    </b>
+</nav>
+<div class="center">
+    <h3><b> <u>STUDENT DETAILS</u></b></h3>
+    <div>
+        <table class="tab">
+            <th>
+                <tr>
+
+                    <label> <b> First Name &nbsp; : </b></label> {{student.firstName}}
+
+                </tr>
+            </th>
+            <tr>
+                <th>
+                    <label> <b> Last Name &nbsp; : </b></label> {{student.lastName}}
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label> <b> Email Id&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; : </b></label> {{student.emailId}}
+
+
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+
+                    <label> <b> Branch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b></label> {{student.branch}}
+                </th>
+            </tr>
+
+        </table>
+    </div>
+</div>
